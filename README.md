@@ -1,4 +1,5 @@
 Real-Time Scene Detection System
+
 A real-time object detection system built with YOLOv8 and OpenCV that processes live webcam footage and generates contextual natural language descriptions of human-object interactions across 80+ detectable object classes.
 Demo
 Point your webcam at any scene and the system will detect objects, draw bounding boxes, and display a natural language description of what it sees at the bottom of the screen in real time.
