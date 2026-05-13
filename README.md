@@ -1,23 +1,34 @@
 # Real-Time Scene Detection System
 
 A real-time object detection system built with YOLOv8 and OpenCV that processes live webcam footage and generates contextual natural language descriptions of human-object interactions across 80+ detectable object classes.
-Demo
+
+# Demo
+
 Point your webcam at any scene and the system will detect objects, draw bounding boxes, and display a natural language description of what it sees at the bottom of the screen in real time.
-Features
+
+# Features
 
 Real-time object detection using YOLOv8
+
 Natural language scene descriptions generated from detected objects
+
 Spatial relationship analysis that identifies when a person is holding or near an object
+
 Transparent overlay text bar displaying live scene context
+
 Multithreaded pipeline that decouples frame capture from model inference for improved responsiveness
+
 FPS counter displayed live on the video feed
 
 # Tech Stack
 
 Python
 OpenCV — webcam access, frame rendering, overlay drawing
+
 YOLOv8 (Ultralytics) — pretrained object detection model
+
 PyTorch — underlying deep learning framework for YOLOv8
+
 Python Threading — multithreaded pipeline for real-time performance
 
 # Prerequisites
@@ -28,7 +39,9 @@ A webcam
 
 # Installation
 Clone the repo
+
 git clone https://github.com/IamTGG97/ObjectDetection.git
+
 cd ObjectDetection
 
 # Create and activate a virtual environment
