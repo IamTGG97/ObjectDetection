@@ -57,13 +57,19 @@ The YOLOv8 model will download automatically on the first run. Press Q to quit.
 
 # How It Works
 Multithreaded Pipeline
+
 The main thread handles reading frames from the webcam and displaying the output as fast as possible. A separate background thread runs YOLOv8 inference continuously on the latest frame. This decoupling prevents the heavy model computation from blocking the video display, resulting in smoother real-time performance.
-Scene Description
+
+# Scene Description
+
 After each detection pass, the system analyzes the spatial relationships between detected objects. If an object's bounding box falls significantly inside a person's bounding box, it is classified as being held by that person. Objects outside any person's bounding box are described as nearby. The result is a natural language sentence rendered in a transparent bar at the bottom of the video feed.
 
 # Examples:
 
 A person holding a cell phone
+
 A person holding a cup and a cell phone near a laptop
+
 2 people near a chair
+
 A laptop is visible
