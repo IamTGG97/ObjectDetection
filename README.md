@@ -1,4 +1,4 @@
-Real-Time Scene Detection System
+# Real-Time Scene Detection System
 
 A real-time object detection system built with YOLOv8 and OpenCV that processes live webcam footage and generates contextual natural language descriptions of human-object interactions across 80+ detectable object classes.
 Demo
@@ -12,7 +12,7 @@ Transparent overlay text bar displaying live scene context
 Multithreaded pipeline that decouples frame capture from model inference for improved responsiveness
 FPS counter displayed live on the video feed
 
-Tech Stack
+# Tech Stack
 
 Python
 OpenCV — webcam access, frame rendering, overlay drawing
@@ -20,13 +20,14 @@ YOLOv8 (Ultralytics) — pretrained object detection model
 PyTorch — underlying deep learning framework for YOLOv8
 Python Threading — multithreaded pipeline for real-time performance
 
-Prerequisites
+# Prerequisites
 
 Python 3.10, 3.11, or 3.12
+
 A webcam
 
-Installation
-# Clone the repo
+# Installation
+Clone the repo
 git clone https://github.com/IamTGG97/ObjectDetection.git
 cd ObjectDetection
 
@@ -41,13 +42,13 @@ Run python detect.py
 
 The YOLOv8 model will download automatically on the first run. Press Q to quit.
 
-How It Works
+# How It Works
 Multithreaded Pipeline
 The main thread handles reading frames from the webcam and displaying the output as fast as possible. A separate background thread runs YOLOv8 inference continuously on the latest frame. This decoupling prevents the heavy model computation from blocking the video display, resulting in smoother real-time performance.
 Scene Description
 After each detection pass, the system analyzes the spatial relationships between detected objects. If an object's bounding box falls significantly inside a person's bounding box, it is classified as being held by that person. Objects outside any person's bounding box are described as nearby. The result is a natural language sentence rendered in a transparent bar at the bottom of the video feed.
 
-Examples:
+# Examples:
 
 A person holding a cell phone
 A person holding a cup and a cell phone near a laptop
